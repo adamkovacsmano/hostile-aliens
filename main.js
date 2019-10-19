@@ -1,19 +1,24 @@
 import  MotherShip, {DefenceShip, AttackShip} from "./data/Ships.js";
 
 
-export let motherShip = new MotherShip("MotherShip", 100, 9);
+let allShips = [];
 
-let shipArray = [1, 2, 3, 4, 5];
+const createShips = (motherNum, defenceNum, attackNum) => {
 
-let shipArray2 = [1, 2, 3, 4, 5, 6, 7, 8];
+  for (let index = 0; index < motherNum; index++) {
+    allShips.push(new MotherShip("MotherShip", 100, 9));
+  }
 
-let defenceShips = shipArray.map(i => new DefenceShip("DefenceShip", 80, 10));
+  for (let index = 0; index < defenceNum; index++) {
+    allShips.push(new DefenceShip("DefenceShip", 80, 10));
+  }
 
-let attackShips = shipArray2.map(i => new AttackShip("Attackship", 45, 12));
+  for (let index = 0; index < attackNum; index++) {
+    allShips.push(new AttackShip("Attackship", 45, 12));
+  }
+}
 
-let allShips = defenceShips.concat(attackShips, motherShip);
-
-console.log(allShips);
+createShips(1, 5, 8);
 
 const randomize = (allShips) => {
   let rand = Math.random();
@@ -26,9 +31,7 @@ const randomize = (allShips) => {
 const renderShips= () => {
   let alienShips = document.getElementById("ships");
   alienShips.innerHTML = "";
-  alienShips.innerHTML += motherShip.render();
-  defenceShips.forEach(i => alienShips.innerHTML += i.render());
-  attackShips.forEach(i => alienShips.innerHTML += i.render());
+  allShips.forEach(i => alienShips.innerHTML += i.render());
 }
 
 const destroy = () =>{
@@ -38,7 +41,7 @@ const destroy = () =>{
 
   for (let index = 0; index < allShips.length; index++) {
     if ( allShips[13].HP === 0){
-      alert("you won");
+      return alert("you saved mother earth comrad!");
      
     } 
   }

@@ -6,7 +6,6 @@ export default class MotherShip{
     this.isAlive = true;
   }
 
-
   hit(){
     if(this.HP > this.HPLossOnHit){
        return this.HP -= this.HPLossOnHit;
@@ -17,6 +16,7 @@ export default class MotherShip{
   render(){
     return `<div><p id ="${this.name}">${this.name}</p><p>${this.HP}</p></div>`
   }
+
 
 } 
 
