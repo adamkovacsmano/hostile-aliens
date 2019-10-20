@@ -34,19 +34,22 @@ const renderShips= () => {
   allShips.forEach(i => alienShips.innerHTML += i.render());
 }
 
-const destroy = () =>{
+const destroy = () => {
+  
   randomize(allShips).hit();
   console.log(randomize(allShips).hit());
   renderShips();
 
   for (let index = 0; index < allShips.length; index++) {
-    if ( allShips[13].HP === 0){
-      return alert("you saved mother earth comrad!");
+    if ( allShips[0].HP === 0){
+      return alert("You have saved mother earth comrad! Well done!");
      
+    }
+    if (allShips[index].HP <= 0){
+      allShips.splice(index, 1);
     } 
   }
 }
-
 
 let burn = document.getElementById("burn");
 burn.addEventListener("click", destroy);

@@ -17,7 +17,6 @@ export default class MotherShip{
     return `<div><p id ="${this.name}">${this.name}</p><p>${this.HP}</p></div>`
   }
 
-
 } 
 
 export class DefenceShip extends MotherShip{

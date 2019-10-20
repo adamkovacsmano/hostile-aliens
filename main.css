@@ -1,3 +1,22 @@
-.dead{
-  color: red;
+
+header{
+  text-align: center;
+  padding: 10px;
+}
+
+
+#burn{
+  color: rgb(255, 65, 65);
+  font-weight: bolder;
+  background-color: rgb(228, 247, 55);
+  padding: 10px 18px;
+  border: 2px solid rgb(255, 65, 65);
+  cursor: pointer;
+}
+
+
+#ships{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
 }
