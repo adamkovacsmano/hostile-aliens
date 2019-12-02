@@ -1,11 +1,29 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
 
-header{
+html,
+body {
+  background-image: url(./backgorund2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+}
+
+header {
   text-align: center;
   padding: 10px;
 }
 
+button {
+  position: absolute;
+  bottom: 5%;
+}
 
-#burn{
+#burn {
   color: rgb(255, 65, 65);
   font-weight: bolder;
   background-color: rgb(228, 247, 55);
@@ -14,9 +32,21 @@ header{
   cursor: pointer;
 }
 
-
-#ships{
+#ships {
   display: flex;
   justify-content: space-around;
   text-align: center;
+  flex-wrap: wrap;
+}
+
+img {
+  width: 200px;
+  height: auto;
+  background-color: rgba(241, 241, 241, 0.808);
+}
+
+#bugContainer {
+  border: 1px solid white;
+  background-color: rgba(0, 17, 116, 0.89);
+  margin: 10px;
 }
