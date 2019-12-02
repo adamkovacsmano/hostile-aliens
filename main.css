@@ -9,6 +9,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
   color: white;
 }
@@ -21,6 +22,7 @@ header {
 button {
   position: absolute;
   bottom: 5%;
+  transform: translate(-50%);
 }
 
 #burn {
@@ -49,4 +51,10 @@ img {
   border: 1px solid white;
   background-color: rgba(0, 17, 116, 0.89);
   margin: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  img {
+    width: 100px;
+  }
 }
