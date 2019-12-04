@@ -1,3 +1,24 @@
+const timer = () => {
+  let sec = 0;
+  let timer = setInterval(() => {
+    document.getElementById("safeTimerDisplay").innerHTML = "00:" + sec;
+    sec++;
+    if (allShips[0].HP <= 0) {
+      let score = sec - 1;
+      clearInterval(timer);
+      displayScore(score);
+    }
+  }, 1000);
+};
+
+const displayScore = score => {
+  document.getElementById("score").innerHTML = +score;
+  console.log(score);
+};
+
+let timerEvent = document.getElementById("timer");
+timerEvent.addEventListener("click", timer);
+
 import MotherShip, { DefenceShip, AttackShip } from "./data/Ships.js";
 
 let allShips = [];
@@ -36,7 +57,7 @@ const renderShips = () => {
 
 const destroy = () => {
   randomize(allShips).hit();
-  console.log(randomize(allShips).hit());
+  // console.log(randomize(allShips).hit());
   renderShips();
 
   for (let index = 0; index < allShips.length; index++) {

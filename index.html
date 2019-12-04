@@ -9,11 +9,21 @@
   </head>
   <body>
     <header>
-      <button id="burn">
-        BURN!
-      </button>
+      <h1>Debugging? Hell yeah!</h1>
     </header>
-    <section id="ships"></section>
+    <main>
+      <section id="ships"></section>
+      <section class="score-container">
+        <div id="safeTimerDisplay"></div>
+        <button id="burn">
+          BURN!
+        </button>
+        <button id="timer">
+          Start Timer
+        </button>
+        <div class="counter-style">Score: <span id="score"></span></div>
+      </section>
+    </main>
   </body>
   <script type="module" src="./data/Ships.js"></script>
   <script type="module" src="main.js"></script>

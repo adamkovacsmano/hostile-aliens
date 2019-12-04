@@ -13,15 +13,22 @@ body {
   height: 100vh;
   color: white;
 }
-
 header {
   text-align: center;
   padding: 10px;
 }
 
-button {
+h1 {
+  font-size: 3rem;
+  background: linear-gradient(to right, rgb(255, 28, 28), rgb(255, 138, 28));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.score-container {
   position: absolute;
   bottom: 5%;
+  left: 50%;
   transform: translate(-50%);
 }
 
@@ -32,6 +39,20 @@ button {
   padding: 10px 18px;
   border: 2px solid rgb(255, 65, 65);
   cursor: pointer;
+}
+
+#timer {
+  color: rgb(228, 247, 55);
+  font-weight: bolder;
+  background-color: rgb(255, 65, 65);
+  padding: 10px 18px;
+  border: 2px solid rgb(228, 247, 55);
+  cursor: pointer;
+}
+
+.counter-style {
+  background-color: black;
+  text-align: center;
 }
 
 #ships {
