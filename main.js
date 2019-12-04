@@ -55,6 +55,12 @@ const renderShips = () => {
   allShips.forEach(i => (alienShips.innerHTML += i.render()));
 };
 
+// const resetGame = () => {
+//   allShips = [];
+//   createShips(1, 5, 8);
+//   renderShips();
+// };
+
 const destroy = () => {
   randomize(allShips).hit();
   // console.log(randomize(allShips).hit());
@@ -62,6 +68,7 @@ const destroy = () => {
 
   for (let index = 0; index < allShips.length; index++) {
     if (allShips[0].HP === 0) {
+      // resetGame();
       return alert("You have saved mother earth comrad! Well done!");
     }
     if (allShips[index].HP <= 0) {
